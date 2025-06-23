@@ -4,7 +4,9 @@ In this project, we analyze a dataset from Kaggle containing information on 426k
 A used car dealership makes money by buying cars at a low price and selling them for more. So, being able to predict a car’s selling price is very important. It’s also important to know which cars people want, so they can sell quickly. Things like the buyer’s age, location, and personal preferences play a big role in what cars are in demand.
 
 ## Exploratory Data Analysis and Data Cleaning
-
+This data comes to us from Kaggle containing information on 
+### Dataset Overview"
+   - Size: 426880  obzervations with 18 features
 ## Modeling
 
 ## Evaluation
