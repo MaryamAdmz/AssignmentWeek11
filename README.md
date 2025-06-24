@@ -29,7 +29,7 @@ This dataset, sourced from Kaggle, includes 426k used cars, a reduced version of
 ## Data Cleaning
 This dataset is messy, with many missing values and irrelevant columns. For example, VIN and id can be dropped since they are just unique identifiers. The region column is also unnecessary because we already have the state column. Additionally, the model column has too many unique values, making it less useful for analysis, so it can be removed as well.\
 With the exception of price and state, all columns contain NaN values. Here is a summary of missing values:
-- year   %28
+- year() %0.28
 - manufacturer  %4.13
 - condition  %40.78
 - cylinders  %41.62
@@ -40,7 +40,7 @@ With the exception of price and state, all columns contain NaN values. Here is a
 - drive %30.58
 - size  %71.77
 - type  %21.75
-- paint_color %30.50\
+- paint_color %30.50
 
 
 ## Modeling
