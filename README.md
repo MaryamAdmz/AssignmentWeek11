@@ -27,7 +27,7 @@ This dataset, sourced from Kaggle, includes 426k used cars, a reduced version of
       - paint_color: 12
       - state: 51
 ## Data Cleaning
-This dataset is messy, with many missing values and irrelevant columns. For example, VIN and id can be dropped since they are just unique identifiers. The region column is also unnecessary because we already have the state column. Additionally, the model column has too many unique values, making it less useful for analysis, so it can be removed as well. No duplicates were detected.\
+This dataset is messy, with many missing values and irrelevant columns. For instance, the 'VIN' and 'id' columns can be dropped as they are merely unique identifiers. The 'region' column is redundant since the 'state' column already provides location information. The 'model' column has too many unique values, making it less useful for analysis. Additionally, the 'drive', 'size', and 'paint_color' columns have a high percentage of missing data, 30.6%, 71.8%, and 30.5% respectively, so they can be removed as well. No duplicate records were found in the dataset.
 With the exception of price and state, all columns contain NaN values. Here is a summary of the missed percentage and the action necessary:
 - year
   - missed percentage: %0.28
@@ -43,7 +43,7 @@ With the exception of price and state, all columns contain NaN values. Here is a
   -  Action: Remove the word cylinders, replace others and missing values by filling with the most common value
 - fuel
   - missed percentage:%0.71
-  - Action: Filling with "Other" as this is a categorical column
+  - Action: Filling with 'Other' as this is a categorical column
 - odometer
   - missed percentage: %1.03
   - Action: Filling with the odometer means
