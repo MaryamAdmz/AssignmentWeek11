@@ -28,8 +28,10 @@ This dataset, sourced from Kaggle, includes 426k used cars, a reduced version of
       - state: 51\
 ## Data Cleaning
 This dataset is messy, with many missing values and irrelevant columns. For example, VIN and id can be dropped since they are just unique identifiers. The region column is also unnecessary because we already have the state column. Additionally, the model column has too many unique values, making it less useful for analysis, so it can be removed as well. No duplicates were detected.\
-With the exception of price and state, all columns contain NaN values. Here is a summary of missed percentage and action necessary:
-- year<prep> %0.28, Action: Filling with the most common value
+With the exception of price and state, all columns contain NaN values. Here is a summary of the missed percentage and the action necessary:
+- year
+  - missed percentage: %0.28,
+  - Action: Filling with the most common value
 - manufacturer  %4.13, Action: Filling with "Other" as this is a categorical column
 - condition  %40.78, Action: Filling with the most common value
 - cylinders  %41.62 Action: Remove the word cylinders, replace others and missed values by filling with the most common value
