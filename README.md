@@ -5,8 +5,11 @@ A used car dealership makes money by buying cars at a low price and selling them
 
 ## Exploratory Data Analysis and Data Cleaning
 This data comes to us from Kaggle containing information on 
-### Dataset Overview"
-   - Size: 426880  obzervations with 18 features
+### Dataset Overview:
+   - **Size:** 426880  observations with 18 features
+   - **Data Type and Features:**
+          - Numerical Features: price, year, and odometer
+           - Categorical Features: region, manufacturer, model, condition, cylinders, fuel, odometer, title_status,    transmission, VIN, drive, size, type, paint_color, and state.    
 ## Modeling
 
 ## Evaluation
