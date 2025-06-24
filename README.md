@@ -46,25 +46,17 @@ With the exception of price and state, all columns contain NaN values. Here is a
   - Action: Filling with 'Other' as this is a categorical column
 - odometer
   - missed percentage: %1.03
-  - Action: Filling with the odometer means
+  - Action: Filling with the odometer mean
 - title_status
   - missed percentage: %1.93
   - Action: Filling with the most common value
 - transmission
   - missed percentage:%0.60
-  - Action: Filling with "Other" as this is a categorical column
-- drive
- - missed percentage: %30.53
-  - Action: Delete this column because missed records percentage
-- size
-  - missed percentage: %71.77
-  - Action: Delete this column because missed records percentage
+  - Action: Filling with 'Other' as this is a categorical column
 - type
   - missed percentage: %21.75
-  - Action: Filling with "Other" as this is a categorical column
-- paint_color
-  - missed percentage:: %30.50
-  - Action: Delete this column because missed records percentage
+  - Action: Filling with 'Other' as this is a categorical column
+
 
 
 ## Modeling
