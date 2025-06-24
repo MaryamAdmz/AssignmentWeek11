@@ -27,20 +27,20 @@ This dataset, sourced from Kaggle, includes 426k used cars, a reduced version of
       - paint_color: 12
       - state: 51\
 ## Data Cleaning
-This dataset is messy, with many missing values and irrelevant columns. For example, VIN and id can be dropped since they are just unique identifiers. The region column is also unnecessary because we already have the state column. Additionally, the model column has too many unique values, making it less useful for analysis, so it can be removed as well.\
-With the exception of price and state, all columns contain NaN values. Here is a summary of missing values:
-- year<prep> %0.28
-- manufacturer  %4.13
-- condition  %40.78
-- cylinders  %41.62
-- fuel %0.71
-- odometer %1.03
-- title_status %1.93
-- transmission %0.60
-- drive %30.58
-- size  %71.77
-- type  %21.75
-- paint_color %30.50
+This dataset is messy, with many missing values and irrelevant columns. For example, VIN and id can be dropped since they are just unique identifiers. The region column is also unnecessary because we already have the state column. Additionally, the model column has too many unique values, making it less useful for analysis, so it can be removed as well. No duplicates were detected.\
+With the exception of price and state, all columns contain NaN values. Here is a summary of missed percentage and action necessary:
+- year<prep> %0.28, Action: Filling with the most common value
+- manufacturer  %4.13, Action: Filling with "Other" as this is a categorical column
+- condition  %40.78, Action: Filling with the most common value
+- cylinders  %41.62 Action: Remove the word cylinders, replace others and missed values by filling with the most common value
+- fuel %0.71 Action: Filling with "Other" as this is a categorical column
+- odometer %1.03 Filling with odometer mean
+- title_status %1.93 Filling with the most common value
+- transmission %0.60 Filling with "Other" as this is a categorical column
+- drive %30.  53 Action: Delete this column because missed records percentage
+- size  %71.77 Action: Delete this column because missed records percentage
+- type  %21.75 Action: Filling with "Other" as this is a categorical column
+- paint_color %30.50 Action: Delete this column because missed records percentage
 
 
 ## Modeling
