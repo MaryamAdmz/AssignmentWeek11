@@ -3,7 +3,7 @@ In this project, we analyze a dataset from Kaggle containing information on 426k
 ## Business Understanding
 A used car dealership makes money by buying cars at a low price and selling them for more. So, being able to predict a car’s selling price is very important. It’s also important to know which cars people want, so they can sell quickly. Things like the buyer’s age, location, and personal preferences play a big role in what cars are in demand.
 
-## Data Understanding, Data Cleaning and Data Preparation
+## Data Understanding and Data Preparation
 This dataset, sourced from Kaggle, includes 426k used cars, a reduced version of the original 3 million, to allow for faster analysis.
 ### Dataset Overview:
 - **Size:** 426880  observations with 18 features
@@ -26,6 +26,7 @@ This dataset, sourced from Kaggle, includes 426k used cars, a reduced version of
       - type: 13
       - paint_color: 12
       - state: 51\
+## Data Cleaning
 This dataset is messy, with many missing values and irrelevant columns. For example, VIN and id can be dropped since they are just unique identifiers. The region column is also unnecessary because we already have the state column. Additionally, the model column has too many unique values, making it less useful for analysis, so it can be removed as well.
 With the exception of price and state, all columns contain NaN values. Here is a summary of missing values:
      - year   %28
