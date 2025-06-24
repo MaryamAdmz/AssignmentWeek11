@@ -9,7 +9,25 @@ This dataset, sourced from Kaggle, includes 426k used cars, a reduced version of
 - **Size:** 426880  observations with 18 features
 - **Data Type and Features:**
   - Numerical Features: price, year, and odometer
-  - Categorical Features: region, manufacturer, model, condition, cylinders, fuel, odometer, title_status,    transmission, VIN, drive, size, type, paint_color, and state.    
+  - Categorical Features: region, manufacturer, model, condition, cylinders, fuel, odometer, title_status,    transmission, VIN, drive, size, type, paint_color, and state.
+   - Unique Values in Categorical Features:
+      - region: 404
+      - year: 114
+      - manufacturer: 42
+      - model: 29649
+      - condition: 6
+      - cylinders 8
+      - fuel: 5
+      - odometer: 104870
+      - title_status: 6
+      - transmission: 3
+      - drive: 3
+      - size: 4
+      - type: 13
+      - paint_color: 12
+      - state: 51
+
+
 ## Modeling
 
 ## Evaluation
