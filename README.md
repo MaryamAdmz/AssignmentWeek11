@@ -5,7 +5,7 @@ A used car dealership makes money by buying cars at a low price and selling them
 
 ## Data Understanding 
 This dataset, sourced from Kaggle, includes 426k used cars, a reduced version of the original 3 million, to allow for faster analysis.
-### Dataset Overview:
+### Dataset Overview
 - **Size:** 426880  observations with 18 features
 - **Data Type and Features:**
   - Numerical Features: price, year, and odometer
@@ -60,7 +60,7 @@ The data has now been cleaned by handling all missing values, allowing us to mov
 ### Defining a Reasonable Price Range Based on IQR
 Outliers can be detected using the Interquartile Range (IQR). Using this rule, we calculated the outlier boundaries for the price column:
 - Lower bound: -23885.0
-- Upper bound: 58475.0\
+- Upper bound: 58475.0
 Since negative prices are not realistic, we define a practical safe range for analysis between 100 and 80,000.
 
 ## Modeling
