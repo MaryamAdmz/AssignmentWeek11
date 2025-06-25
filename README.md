@@ -63,6 +63,7 @@ Outliers can be detected using the Interquartile Range (IQR). Using this rule, w
    - Upper bound: 58475.0
      
 Since negative prices are not realistic, we define a practical safe range for analysis between 100 and 80,000.
+![plot1](figures/plot1.png)
 
 ## Modeling
 
