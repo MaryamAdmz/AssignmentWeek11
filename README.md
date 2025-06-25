@@ -59,8 +59,8 @@ With the exception of price and state, all columns contain NaN values. Here is a
 The data has now been cleaned by handling all missing values, allowing us to move forward with data exploration and visualizations.
 ### Defining a Reasonable Price Range Based on IQR
 Outliers can be detected using the Interquartile Range (IQR). Using this rule, we calculated the outlier boundaries for the price column:
-- Lower bound: -23885.0
-- Upper bound: 58475.0\
+ - Lower bound: -23885.0
+ - Upper bound: 58475.0\
 Since negative prices are not realistic, we define a practical safe range for analysis between 100 and 80,000.
 
 ## Modeling
