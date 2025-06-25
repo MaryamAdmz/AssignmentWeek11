@@ -65,6 +65,7 @@ Outliers can be detected using the Interquartile Range (IQR). Using this rule, w
 Since negative prices are not realistic, we define a practical safe range for analysis between 100 and 80,000.
 ![plot1](figures/plot1.png)
 
+
 ## Modeling
 With the final cleaned dataset prepared, we proceeded to build several regression models using price as the target variable. We experimented following regression algorithms and explored various parameter settings to optimize model performance. To ensure the robustness of our findings, we applied cross-validation techniques during model training and evaluation.
 
