@@ -46,7 +46,7 @@ With the exception of price and state, all columns contain NaN values. Here is a
   - Action: Filling with 'other' as this is a categorical column
 - odometer
   - missed percentage: %1.03
-  - Action: Filling with the odometer mean
+  - Action: Filling with the odometer's mean
 - title_status
   - missed percentage: %1.93
   - Action: Filling with the most common value
@@ -66,6 +66,14 @@ Since negative prices are not realistic, we define a practical safe range for an
 ![plot1](figures/plot1.png)
 
 ## Modeling
+With the final cleaned dataset prepared, we proceeded to build several regression models using price as the target variable. We experimented following regression algorithms and explored various parameter settings to optimize model performance. To ensure the robustness of our findings, we applied cross-validation techniques during model training and evaluation.
+
+ - Simple Linear Regression
+ - Linear Regression with Polynomial Features
+ - Ridge Regression with Polynomial Features
+ - Lasso Regression with polynomial features
+ - Linear Regression with Sequential Feature Selector
+
 
 ## Evaluation
 
