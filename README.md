@@ -27,44 +27,36 @@ This dataset, sourced from Kaggle, includes 426k used cars, a reduced version of
       - paint_color: 12
       - state: 51
 ### Data Cleaning and Data Preparation
-This dataset is messy, with many missing values and irrelevant columns. For instance, the 'VIN' and 'id' columns can be dropped as they are merely unique identifiers. The 'region' column is redundant since the 'state' column already provides location information. The 'model' column has too many unique values, making it less useful for analysis. Additionally, the 'drive', 'size', and 'paint_color' columns have a high percentage of missing data, 30.6%, 71.8%, and 30.5% respectively, so they can be removed as well. No duplicate records were found in the dataset.
-With the exception of price and state, all columns contain NaN values. Here is a summary of the missed percentage and the action necessary:
-- year
-  - missed percentage: %0.28
-  - Action: Filling with the most common value
-- manufacturer
-  - missed percentage: %4.13
-  - Action: Filling with 'other' as this is a categorical column
-- condition
-  -  missed percentage: %40.78
-  -  Action: Filling with the most common value
-- cylinders
-  -  missed percentage: %41.62
-  -  Action: Remove the word cylinders, replace others and missing values by filling with the most common value
-- fuel
-  - missed percentage:%0.71
-  - Action: Filling with 'other' as this is a categorical column
-- odometer
-  - missed percentage: %1.03
-  - Action: Filling with the odometer's mean
-- title_status
-  - missed percentage: %1.93
-  - Action: Filling with the most common value
-- transmission
-  - missed percentage:%0.60
-  - Action: Filling with 'other' as this is a categorical column
-- type
-  - missed percentage: %21.75
-  - Action: Filling with 'other' as this is a categorical column\
-The data has now been cleaned by handling all missing values, allowing us to move forward with data exploration and visualizations.
+ Here is a summary of the missed percentage:
+- id               0.000000
+- region           0.000000
+- price            0.000000
+- year             0.282281
+- manufacturer     4.133714
+- model            1.236179
+- condition       40.785232
+- cylinders       41.622470
+- fuel             0.705819
+- odometer         1.030735
+- title_status     1.930753
+- transmission     0.598763
+- VIN             37.725356
+- drive           30.586347
+- size            71.767476
+- type            21.752717
+- paint_color     30.501078
+- state            0.000000
+This dataset is messy, with many missing values and irrelevant columns. For instance, the 'VIN' and 'id' columns can be dropped as they are merely unique identifiers. The 'region' column is redundant since the 'state' column already provides location information. The 'model' column has too many unique values, making it less useful for analysis. Additionally, the 'drive', 'size', and 'paint_color' columns have a high percentage of missing data, 30.6%, 71.8%, and 30.5% respectively, so they can be removed as well. No duplicate records were found in the dataset. With the exception of price and state, all columns contain NaN values. We also removed all rows containing NaN values. The data has now been cleaned by handling all missing values, allowing us to move forward with data exploration and visualizations.
 ### Defining a Reasonable Price Range Based on IQR
 Outliers can be detected using the Interquartile Range (IQR). Using this rule, we calculated the outlier boundaries for the price column:
    - Lower bound: -23885.0
    - Upper bound: 58475.0
-     
-Since negative prices are not realistic, we define a practical safe range for analysis between 100 and 80,000.
+Since negative prices are not realistic, we define a practical safe range for analysis between $5000 and $80,000 for used cars.
 ![plot1](figures/plot1.png)
-
+outlier boundaries for the odometer column:
+   - Lower bound: -106053.75
+   - Upper bound:  277300.25
+Since negative or extremely high odometer readings are not realistic, we define a practical range for analysis between 5000 miles and above for used car.
 
 ## Modeling
 With the final cleaned dataset prepared, we proceeded to build several regression models using price as the target variable. We experimented following regression algorithms and explored various parameter settings to optimize model performance. To ensure the robustness of our findings, we applied cross-validation techniques during model training and evaluation.
