@@ -58,7 +58,7 @@ outlier boundaries for the odometer column:
    - Upper bound:  277300.25\
 Since negative or extremely high odometer readings are not realistic, we define a practical range for analysis between 5000 miles and above for a used car.
 After all the data manipulations discussed above, we reviewed the correlation matrix for the final dataset. Among the categorical variables created, the strongest correlation with price was observed for fuel_diesel. Overall, most correlations with price were negative. The only attributes showing positive correlations were year, condition_like_new, fuel_diesel, size_full-size, and drive_4wd. Although these correlations are positive, none are particularly strong—the highest, for fuel_diesel, remained below 0.85. Therefore, no variables were removed solely based on these correlation results.
-#######
+![Correlation heatmap of used car features](figures/plot2.png)
 
 
 
