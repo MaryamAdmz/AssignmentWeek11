@@ -52,13 +52,13 @@ Outliers can be detected using the Interquartile Range (IQR). Using this rule, w
    - Lower bound: -23885.0
    - Upper bound: 58475.0\
 Since negative prices are not realistic, we define a practical safe range for analysis between $5000 and $80,000 for used cars.
-
+![Price](figures/plot1.png)
 outlier boundaries for the odometer column:
    - Lower bound: -106053.75
    - Upper bound:  277300.25\
 Since negative or extremely high odometer readings are not realistic, we define a practical range for analysis between 5000 miles and above for a used car.
 After all the data manipulations discussed above, we reviewed the correlation matrix for the final dataset. Among the categorical variables created, the strongest correlation with price was observed for fuel_diesel. Overall, most correlations with price were negative. The only attributes showing positive correlations were year, condition_like_new, fuel_diesel, size_full-size, and drive_4wd. Although these correlations are positive, none are particularly strong—the highest, for fuel_diesel, remained below 0.85. Therefore, no variables were removed solely based on these correlation results.
-![Cor](figures/plot2.png)
+![Cor](figures/plot4.png)
 
 
 
