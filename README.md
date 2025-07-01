@@ -57,15 +57,22 @@ outlier boundaries for the odometer column:
    - Lower bound: -106053.75
    - Upper bound:  277300.25\
 Since negative or extremely high odometer readings are not realistic, we define a practical range for analysis between 5000 miles and above for a used car.
+After all the data manipulations discussed above, we reviewed the correlation matrix for the final dataset. Among the categorical variables created, the strongest correlation with price was observed for fuel_diesel. Overall, most correlations with price were negative. The only attributes showing positive correlations were year, condition_like_new, fuel_diesel, size_full-size, and drive_4wd. Although these correlations are positive, none are particularly strong—the highest, for fuel_diesel, remained below 0.85. Therefore, no variables were removed solely based on these correlation results.
+#######
+
+
+
+
+
 
 ## Modeling
 With the final cleaned dataset prepared, we proceeded to build several regression models using price as the target variable. We experimented following regression algorithms and explored various parameter settings to optimize model performance. To ensure the robustness of our findings, we applied cross-validation techniques during model training and evaluation.
 
- - Simple Linear Regression
- - Linear Regression with Polynomial Features
- - Ridge Regression with Polynomial Features
- - Lasso Regression with polynomial features
- - Linear Regression with Sequential Feature Selector
+ - Model 1: Simple Linear Regression using the full set of features using the final dataset
+ - Model 2: Regression Model using a selected number of features only
+ - Model 3: The application will be developed using the features that show stronger correlations with price in the dataset filtered to include records where odometer > 5,000 and price > 5,000. The selected features are odometer, year, fuel_diesel, drive_4wd, and size_full-size.
+ - Model 4: The application will be developed using the features that show stronger correlations with price in the filtered dataset where odometer > 5,000, price > 5,000, and year > 1990. These selected features include odometer, year, fuel_diesel, drive_4wd, and size_full-size.
+ 
 
 
 ## Evaluation
