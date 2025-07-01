@@ -69,12 +69,25 @@ After all the data manipulations discussed above, we reviewed the correlation ma
 With the final cleaned dataset prepared, we proceeded to build several regression models using price as the target variable. We experimented following regression algorithms and explored various parameter settings to optimize model performance. To ensure the robustness of our findings, we applied cross-validation techniques during model training and evaluation.
 
  - Model 1: Simple Linear Regression using the full set of features using the final dataset
- - Model 2: Regression Model using a selected number of features only
- - Model 3: The application will be developed using the features that show stronger correlations with price in the dataset filtered to include records where odometer > 5,000 and price > 5,000. The selected features are odometer, year, fuel_diesel, drive_4wd, and size_full-size.
- - Model 4: The application will be developed using the features that show stronger correlations with price in the filtered dataset where odometer > 5,000, price > 5,000, and year > 1990. These selected features include odometer, year, fuel_diesel, drive_4wd, and size_full-size.
+   - Accuracy Score (Training model): 44.54
+   - Accuracy Score (Test model): 43.09
+ - Model 2: The application will be developed using the features that show stronger correlations with price in the dataset filtered to include records where odometer > 5,000 and price > 5,000. The selected features are odometer, year, fuel_diesel, drive_4wd, and size_full-size.
+     - Accuracy Score (Training model): 45.26
+     - Accuracy Score (Test model): 46.88
+ - Model 3: The application will be developed using the features that show stronger correlations with price in the filtered dataset where odometer > 5,000, price > 5,000, and year > 1990. These selected features include odometer, year, fuel_diesel, drive_4wd, and size_full-size.
+    - Accuracy Score (Training model): 47.52
+    - Accuracy Score (Test model): 48.29
  
+When we analyze the importance of feature selection based on the trained model, we observe the following order:
+ - Model 2:  Diesel Fuel, Odometer, Four Wheel Drive, Full Size, and Year
+ - Model 3:  Diesel Fuel, Year, Odometer, Four Wheel Drive, and Full Size
 
 
 ## Evaluation
+ Model 2 and Model 3 are currently the recommended models based on their relative accuracy and stability. Although predictive performance can be further improved, these results provide a solid starting point for building tools to estimate used car prices and inform business decisions.
 
-## Deployment
+## Next Steps and Recommendations
+Collecting more comprehensive and higher-quality data would strengthen the model’s performance. Ideally, this data should include modern features that influence used car prices, such as 
+parking sensors, keyless entry, upgraded audio systems, backup cameras, remote start, and detailed mileage records.
+We also recommend categorizing variables such as paint color and state into standardized classifications. This would reduce the number of permutations and make it easier to incorporate these features effectively into the model.
+
