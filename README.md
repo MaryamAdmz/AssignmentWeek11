@@ -71,12 +71,12 @@ With the final cleaned dataset prepared, we proceeded to build several regressio
  - Model 1: Simple Linear Regression using the full set of features using the final dataset
    - Accuracy Score (Training model): 44.54
    - Accuracy Score (Test model): 43.09
- - Model 2: The application will be developed using the features that show stronger correlations with price in the dataset filtered to include records where odometer > 5,000 and price > 5,000. The selected features are odometer, year, fuel_diesel, drive_4wd, and size_full-size.
-     - Accuracy Score (Training model): 45.26
-     - Accuracy Score (Test model): 46.88
+ - Model 2: The application will be developed using the features that show stronger correlations with price in the dataset filtered to include records where odometer > 5,000 and price > 2,000. The selected features are odometer, year, fuel_diesel, drive_4wd, and size_full-size.
+     - Accuracy Score (Training model): 37.01
+     - Accuracy Score (Test model): 41.91
  - Model 3: The application will be developed using the features that show stronger correlations with price in the filtered dataset where odometer > 5,000, price > 5,000, and year > 1990. These selected features include odometer, year, fuel_diesel, drive_4wd, and size_full-size.
-    - Accuracy Score (Training model): 47.52
-    - Accuracy Score (Test model): 48.29
+    - Accuracy Score (Training model): 49.93
+    - Accuracy Score (Test model): 46.92
  
 When we analyze the importance of feature selection based on the trained model, we observe the following order:
  - Model 2:  Diesel Fuel, Odometer, Four Wheel Drive, Full Size, and Year
@@ -84,7 +84,7 @@ When we analyze the importance of feature selection based on the trained model, 
 
 
 ## Evaluation
- Model 2 and Model 3 are currently the recommended models based on their relative accuracy and stability. Although predictive performance can be further improved, these results provide a solid starting point for building tools to estimate used car prices and inform business decisions.
+Model 3 is currently the recommended model based on their relative accuracy and stability. Although predictive performance can be further improved, these results provide a solid starting point for building tools to estimate used car prices and inform business decisions.
 
 ## Next Steps and Recommendations
 Collecting more comprehensive and higher-quality data would strengthen the model’s performance. Ideally, this data should include modern features that influence used car prices, such as 
