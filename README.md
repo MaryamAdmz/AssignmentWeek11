@@ -74,7 +74,7 @@ With the final cleaned dataset prepared, we proceeded to build several regressio
  - Model 2: The application will be developed using the features that show stronger correlations with price in the dataset filtered to include records where odometer > 5,000 and price > 2,000. The selected features are odometer, year, fuel_diesel, drive_4wd, and size_full-size.
      - Accuracy Score (Training model): 37.01
      - Accuracy Score (Test model): 41.91
- - Model 3: The application will be developed using the features that show stronger correlations with price in the filtered dataset where odometer > 5,000, price > 5,000, and year > 1990. These selected features include odometer, year, fuel_diesel, drive_4wd, and size_full-size.
+ - Model 3: The application will be developed using the features that show stronger correlations with price in the filtered dataset where odometer > 5,000, price > 2,000, and year > 1990. These selected features include odometer, year, fuel_diesel, drive_4wd, and size_full-size.
     - Accuracy Score (Training model): 49.93
     - Accuracy Score (Test model): 46.92
  
